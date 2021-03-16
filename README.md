@@ -11,10 +11,13 @@ SHOULD means that the library can implement the feature.
 * Must implement the core GraphQL specification (including subscriptions)
 * Must be mantained
 * Must implement dataloader
-* Should implement GraphQL extensions (ex. `multipart`, `federation`, `pagination`)
-* If not implemented the library's name appears like **this**
-* Should use code-first approach
+* Should implement GraphQL extensions (ex. `multipart`, `federation`, `pagination (relay)`)
+  * While they are extensions of the standard, they are useful and should be considered when choosing a library, the least important one for me is `federation` because we can use "plain olde" schema stitching which works well
+  * If not implemented the library's name appears like **this**
+* Should use code-first / struct-first approach
   * If not implemented the library's name appears like *this*
+
+Note that the above requirements list is mostly from personal preference, I prefer code-first, I prefer having the extensions available.
 
 ## Library list
 
@@ -41,7 +44,7 @@ SHOULD means that the library can implement the feature.
   * https://github.com/99designs/gqlgen/blob/master/example/starwars/schema.graphql
   * https://gqlgen.com/recipes/federation/
 * **ccbrown/api-fu**
-  * Only implements core features, can't find file-upload or federation
+  * ???
 
 ### PHP
 
@@ -55,6 +58,7 @@ SHOULD means that the library can implement the feature.
   * No federation
 * *Siler*
   * https://github.com/leocavalcante/siler/tree/main/examples/graphql
+  * ???
 
 ### Python
 
@@ -87,39 +91,52 @@ SHOULD means that the library can implement the feature.
 
 ### .NET C#
 
-* *graphql-dotnet*
-* 
-* hotchocolate
-* EntityGraphQL
-* NGraphQL
-
-### Ruby
-
-* graphql-ruby
-
-* agoo
+* **graphql-dotnet**
+  * No federation
+  * https://graphql-dotnet.github.io/docs/getting-started/relay
+  * https://github.com/JannikLassahn/graphql-dotnet-upload
+* **hotchocolate**
+  * No federation, provides alternative schema stitching (not sure if I should count it)
+  * https://chillicream.com/docs/hotchocolate/v10/schema/relay/
+  * Upload is a WIP: https://github.com/ChilliCream/hotchocolate/pull/2936
 
 ### Rust
 
-* graphql-rust/juniper 
-
+* **graphql-rust/juniper**
+  * No federation
+  * No relay
+  * No file upload
 * async-graphql/async-graphql
+  * https://async-graphql.github.io/async-graphql/en/apollo_federation.html
+  * https://async-graphql.github.io/async-graphql/en/cursor_connections.html
+  * https://github.com/async-graphql/examples/blob/master/actix-web/upload/src/main.rs
 
 ### Elixir
 
 * absinthe
-
-* graphql-elixir/graphql
+  * No federation
+  * https://hexdocs.pm/absinthe/relay.html
+  * https://hexdocs.pm/absinthe/file-uploads.html#example
 
 ### Scala
 
-* sangria-graphql/sangria
-
+* **sangria-graphql/sangria**
+  * No federation https://github.com/sangria-graphql/sangria/issues/462
+  * https://github.com/sangria-graphql/sangria-relay
+  * No file upload https://github.com/sangria-graphql/sangria/issues/503
 * ghostdogpr/caliban 
+  * https://ghostdogpr.github.io/caliban/docs/federation.html
+  * Relay (implemented "manually") https://github.com/ghostdogpr/caliban/issues/132
+  * https://github.com/ghostdogpr/caliban/blob/master/adapters/play/src/main/scala/caliban/uploads/Upload.scala
 
 ### Haskell
 
-* morpheus-graphql
-
-* mu-haskell
+* **morpheus-graphql**
+  * No federation
+  * No relay
+  * No uploads
+* *mu-haskell*
+  * No federation
+  * No relay
+  * No uploads
 
