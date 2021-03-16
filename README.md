@@ -56,9 +56,10 @@ Note that the above requirements list is mostly from personal preference, I pref
   * https://lighthouse-php.com/5.3/digging-deeper/file-uploads.html
   * https://lighthouse-php.com/master/digging-deeper/relay.html
   * No federation
-* *Siler*
+* **Siler**
   * https://github.com/leocavalcante/siler/tree/main/examples/graphql
-  * ???
+  * No federation
+  * Manual relay
 
 ### Python
 
