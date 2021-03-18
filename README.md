@@ -94,7 +94,8 @@ https://relay.dev/graphql/connections.htm
   * https://ariadnegraphql.org/docs/apollo-federation
   * https://github.com/mirumee/ariadne/issues/188 (?)
 * strawberry-graphql/strawberry
-  * Missing docs for the additional features, should be included
+  * Missing docs for the federation and relay
+  * https://strawberry.rocks/docs/features/file-upload
 * ***tartiflette/tartiflette***
   * https://tartiflette.io/docs/tutorial/getting-started
 
