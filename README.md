@@ -19,23 +19,45 @@ SHOULD means that the library can implement the feature.
 
 Note that the above requirements list is mostly from personal preference, I prefer code-first, I prefer having the extensions available.
 
+Note that any graphql server can be relay compliant, but I believe that any help in achieving it must be counted.
+
+https://relay.dev/docs/guides/graphql-server-specification/
+
+https://relay.dev/graphql/connections.htm
+
 ## Library list
 
 ### Node
 
 #### Server
 
-* mercurius
-
-* apollo
-
-* express-graphql
+* **mercurius**
+  * https://github.com/mercurius-js/mercurius/blob/master/docs/federation.md
+  * https://mercurius.dev/#/docs/plugins?id=mercurius-upload
+  * Manual relay
+* **apollo**
+  * https://www.apollographql.com/docs/apollo-server/data/file-uploads/
+  * Manual relay
+  * This is, of course, the most feature rich server
+* **express-graphql**
+  * https://github.com/jaydenseric/graphql-upload
+  * No federation
+  * Manual relay
+* **graphql-yoga**
+  * https://github.com/prisma-labs/graphql-yoga/tree/master/examples/file-upload
+  * No federation
+  * Manual relay
 
 #### Library
 
 * nexus
-
+  * https://nexusjs.org/docs/plugins/connection
+  * https://github.com/nayaabkhan/nexus-federation-example
+  * For file upload, import the type, the rest must be handled by the server
 * typegraphql
+  * https://github.com/MichalLytek/type-graphql/tree/master/examples/apollo-federation
+  * relay manually https://github.com/calmonr/typegraphql-relay https://github.com/MichalLytek/type-graphql/issues/142
+  * https://github.com/MichalLytek/type-graphql/issues/37 (?)
 
 ### GoLang
 
@@ -114,7 +136,7 @@ Note that the above requirements list is mostly from personal preference, I pref
 
 ### Elixir
 
-* absinthe
+* **absinthe**
   * No federation
   * https://hexdocs.pm/absinthe/relay.html
   * https://hexdocs.pm/absinthe/file-uploads.html#example
