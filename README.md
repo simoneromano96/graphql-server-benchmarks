@@ -16,6 +16,7 @@ SHOULD means that the library can implement the feature.
   * If not implemented the library's name appears like **this**
 * Should use code-first / struct-first approach
   * If not implemented the library's name appears like *this*
+* There is no db, everything is "mocked"
 
 Note that the above requirements list is mostly from personal preference, I prefer code-first, I prefer having the extensions available.
 
